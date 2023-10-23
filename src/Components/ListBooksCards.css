@@ -1,0 +1,67 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+}
+  
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+  
+.card-subtitle {
+    font-size: 1rem;
+    color: #555;
+}
+  
+.card-text {
+    font-size: 1rem;
+}
+  
+.card-footer {
+    background-color: transparent; 
+    border: none; 
+    text-align: left; 
+}
+  
+.col-3 {
+    background-color: transparent;
+}
+  
+.card-image {
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+  
+.card-content {
+    display: flex;
+}
+  
+.text-content {
+    flex: 1;
+    padding: 10px; 
+    text-align: left;
+}
+
+.star-icon{
+    color:yellow;
+    /*border: 1px solid black; 
+    background-color: black;*/
+}
+
+.card-links {
+    display: flex;
+    justify-content: flex-end;
+}
+  
+.card-link {
+    margin-left: 10px; /* Adicione um espaçamento entre os links */
+    text-decoration: none; /* Remova a decoração de link (sublinhado) */
+    color: #007bff; /* Cor dos links (pode ajustar a cor desejada) */
+}
