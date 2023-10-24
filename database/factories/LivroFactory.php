@@ -18,7 +18,8 @@ class LivroFactory extends Factory
             'autor' => $this->faker->name,
             'classificacao' => $this->faker->numberBetween(1,5),
             'resenha' => $this->faker->paragraph,
-            'imagem' => $this->faker->imageUrl
+            'created_at' => now(),
+            'updated_at' => now()
         ];
     }
 }

@@ -10,13 +10,11 @@ class Livro extends Model
     use HasFactory;
 
     protected $table = 'livros';
-    public $timestamps = false; 
 
     protected $fillable = [
         'titulo',
         'autor',
         'classificacao',
-        'resenha',
-        'imagem'
+        'resenha'
     ];
 }
