@@ -1,5 +1,5 @@
 .custom-navbar {
-    background-color: #343a40; 
+    background-color: #353535; 
 }
   
 .custom-navbar .navbar-brand {
@@ -18,9 +18,9 @@
 }
   
 .custom-navbar .navbar-toggler {
-    border: 1px solid #fff; 
+    border: 1px solid black; 
 }
 
 .custom-navbar .navbar-nav .nav-link:hover {
-    color: #555; 
+    color: black; 
 }

@@ -1,18 +1,8 @@
 import React from 'react';
 import './ListBooksCards.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import StarRating from './StarRating';
 import { Link } from 'react-router-dom';
-
-function StarRating({ rating }) {
-    const stars = [];
-    for (let i = 0; i < rating; i++) {
-      stars.push(<FontAwesomeIcon key={i} icon={faStar} className="star-icon" />);
-    }
-  
-    return <div>{stars}</div>;
-}
 
 //<img src="https://via.placeholder.com/100x100" alt="Imagem do Livro 1" className="card-image" />
 //                            <p className="card-text">{resenha}</p>
@@ -21,7 +11,7 @@ const onDelete = (id_livro) => {
     if (!window.confirm("Deseja realmente excluir este livro?")) return;
       
     try {
-        
+
         fetch(`http://localhost:8000/api/livros/${id_livro}`, {
             method: 'DELETE',
             headers: {
@@ -66,7 +56,7 @@ function Card({titulo,autor,classificacao,id_livro}){
 
 function ListBooksCards({livros}){
     return (
-        <div className="row">
+        <div className="row bg-transparent">
           {livros.map((card, index) => (
             <Card key={index} titulo={card.titulo} autor={card.autor} classificacao={card.classificacao} id_livro={card.id}/>
           ))}

@@ -5,7 +5,6 @@ import NavBar from './Components/NavBar';
 import BookForm from './Components/BookForm';
 import { useNavigate } from 'react-router-dom';
 
-
 function AddBook(){
 
     const initialFormState = {

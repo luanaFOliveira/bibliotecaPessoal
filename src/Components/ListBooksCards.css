@@ -5,7 +5,9 @@
     margin: 10px;
     padding: 10px;
     display: flex;
+    background-color: #3c6e71;
 }
+
   
 .card-title {
     font-size: 1.25rem;
@@ -63,5 +65,5 @@
 .card-link {
     margin-left: 10px; /* Adicione um espaçamento entre os links */
     text-decoration: none; /* Remova a decoração de link (sublinhado) */
-    color: #007bff; /* Cor dos links (pode ajustar a cor desejada) */
+    color: black; /* Cor dos links (pode ajustar a cor desejada) */
 }
