@@ -5,6 +5,7 @@ import ListBooksCards from './Components/ListBooksCards';
 import  { Route,Routes } from "react-router-dom";
 import ListBooks from './ListBooks';
 import AddBook from './AddBook';
+import EditBook from './EditBook';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Route path="/" element={<ListBooks/>}></Route>
       <Route path="/listBooks" element={<ListBooks/>}></Route>
       <Route path="/addBook" element={<AddBook/>}></Route>
+      <Route path="/editBook/:id_livro" element={<EditBook/>}></Route>
     </Routes>
   );
 }

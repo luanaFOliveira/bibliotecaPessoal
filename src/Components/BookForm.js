@@ -1,121 +1,36 @@
 import React, { useState } from 'react';
-import { Form, Button } from 'reactstrap';
+import { Button, Container, Form, FormGroup, Input, Label } from 'reactstrap';
+import { useNavigate } from 'react-router-dom';
 
-/*
-function BookForm({ props }) {
-
-  const [book, setBook] = useState({
-    titulo: props.book ? props.book.titulo : '',
-    autor: props.book ? props.book.autor : '',
-    resenha: props.book ? props.book.resenha : '',
-    classificacao: props.book ? props.book.classificacao : '',
-    imagem: props.book ? props.book.imagem : ''
-  });
-
-  const [errorMsg, setErrorMsg] = useState('');
-  const { titulo, autor, classificacao, resenha,imagem } = book;
-
-  const handleOnSubmit = (event) => {
-    event.preventDefault();
-    const values = [titulo, autor, classificacao, resenha,imagem];
-    let errorMsg = '';
-
-    const allFieldsFilled = values.every((field) => {
-      const value = `${field}`.trim();
-      return value !== '' && value !== '0';
-    });
-
-    if (allFieldsFilled) {
-      const book = {
-        titulo,
-        autor,
-        classificacao,
-        resenha,
-        imagem
-      };
-      props.handleOnSubmit(book);
-    } else {
-      errorMsg = 'Please fill out all the fields.';
-    }
-    setErrorMsg(errorMsg);
-  };
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
+function BookForm({initialFormState,handleSubmit,handleChange}) {
     
-    setBook((prevState) => ({
-        ...prevState,
-        [name]: value
-    }));
     
-  };
-
-  return (
-    <div className="main-form">
-      {errorMsg && <p className="errorMsg">{errorMsg}</p>}
-      <Form onSubmit={handleOnSubmit}>
-        <Form.Group controlId="name">
-          <Form.Label>Book Name</Form.Label>
-          <Form.Control
-            className="input-control"
-            type="text"
-            name="titulo"
-            value={titulo}
-            placeholder="Enter name of book"
-            onChange={handleInputChange}
-          />
-        </Form.Group>
-        <Form.Group controlId="autor">
-          <Form.Label>Book autor</Form.Label>
-          <Form.Control
-            className="input-control"
-            type="text"
-            name="autor"
-            value={autor}
-            placeholder="Enter name of autor"
-            onChange={handleInputChange}
-          />
-        </Form.Group>
-        <Form.Group controlId="resenha">
-          <Form.Label>resenha</Form.Label>
-          <Form.Control
-            className="input-control"
-            type="text"
-            name="resenha"
-            value={resenha}
-            placeholder="Enter available resenha"
-            onChange={handleInputChange}
-          />
-        </Form.Group>
-        <Form.Group controlId="classificacao">
-          <Form.Label>Book classificacao</Form.Label>
-          <Form.Control
-            className="input-control"
-            type="number"
-            name="classificacao"
-            value={classificacao}
-            placeholder="Enter classificacao of book"
-            onChange={handleInputChange}
-          />
-        </Form.Group>
-        <Form.Group controlId="imagem">
-          <Form.Label>URL imagem</Form.Label>
-          <Form.Control
-            className="input-control"
-            type="text"
-            name="imagem"
-            value={imagem}
-            placeholder="Enter url image of book"
-            onChange={handleInputChange}
-          />
-        </Form.Group>
-        <Button variant="primary" type="submit" className="submit-btn">
-          Submit
-        </Button>
-      </Form>
-    </div>
-  );
+    return(<div>
+        <Container>
+            <Form onSubmit={handleSubmit}>
+                <FormGroup>
+                    <Label for="titulo">Titulo</Label>
+                    <Input type="text" name="titulo" id="titulo" placeholder={initialFormState.titulo} onChange={handleChange}/>
+                </FormGroup>
+                <FormGroup>
+                    <Label for="autor">Autor</Label>
+                    <Input type="text" name="autor" id="autor" placeholder={initialFormState.autor} onChange={handleChange}/>
+                </FormGroup>
+                <FormGroup>
+                    <Label for="resenha">Resenha</Label>
+                    <Input type="text" name="resenha" id="resenha" placeholder={initialFormState.resenha} onChange={handleChange}/>
+                </FormGroup>
+                <FormGroup>
+                    <Label for="classificacao">Classificacao</Label>
+                    <Input type="text" name="classificacao" id="classificacao" placeholder={initialFormState.classificacao} onChange={handleChange}/>
+                </FormGroup>
+                <FormGroup>
+                    <Button color="primary" type="submit">Enviar</Button>{' '}
+                </FormGroup>
+            </Form>
+        </Container>
+        </div>
+    );
 };
 
 export default BookForm;
-*/

@@ -7,6 +7,7 @@ import { StrictMode } from 'react';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 import ListBooks from './ListBooks';
 import AddBook from './AddBook';
+import EditBook from './EditBook';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path:"/addBook",
     element:<AddBook/>,
+  },
+  {
+    path:"/editBook/:id_livro",
+    element:<EditBook/>,
   },
  
 ]);
