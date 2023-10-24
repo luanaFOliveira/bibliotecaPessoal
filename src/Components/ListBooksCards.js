@@ -13,18 +13,18 @@ function StarRating({ rating }) {
     return <div>{stars}</div>;
 }
 
+//<img src="https://via.placeholder.com/100x100" alt="Imagem do Livro 1" className="card-image" />
+//                            <p className="card-text">{resenha}</p>
 
-function Card({titulo,autor,resenha,classificacao,imagem}){
+function Card({titulo,autor,classificacao}){
     return (
         <div className="col-3 bg-transparent">
             <div className="card custom-card">
                 <div className="card-body">
                     <div className="card-content">
-                        <img src="https://via.placeholder.com/100x100" alt="Imagem do Livro 1" className="card-image" />
                         <div className="text-content">
                             <h5 className="card-title">{titulo}</h5>
                             <h6 className="card-subtitle mb-2 text-muted">{autor}</h6>
-                            <p className="card-text">{resenha}</p>
                             <div className="card-footer">
                                 <StarRating rating={classificacao} />
                                 <div className="card-links">
@@ -44,7 +44,7 @@ function ListBooksCards({livros}){
     return (
         <div className="row">
           {livros.map((card, index) => (
-            <Card key={index} titulo={card.titulo} autor={card.autor} resenha={card.resenha} classificacao={card.classificacao} imagem={card.imagem}/>
+            <Card key={index} titulo={card.titulo} autor={card.autor} classificacao={card.classificacao}/>
           ))}
         </div>
     );

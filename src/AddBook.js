@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Container, Form, FormGroup, Input, Label } from 'reactstrap';
 import NavBar from './Components/NavBar';
-import BookForm from './Components/BookForm';
+//import BookForm from './Components/BookForm';
 
-/*
+
 function AddBook(){
     const initialFormState = {
         titulo: '',
@@ -58,11 +58,7 @@ function AddBook(){
                     <Input type="text" name="classificacao" id="classificacao" onChange={handleChange}/>
                 </FormGroup>
                 <FormGroup>
-                    <Label for="imagem">URL da Capa</Label>
-                    <Input type="text" name="imagem" id="imagem" onChange={handleChange}/>
-                </FormGroup>
-                <FormGroup>
-                    <Button color="primary" type="submit">Save</Button>{' '}
+                    <Button color="primary" type="submit">Enviar</Button>{' '}
                 </FormGroup>
             </Form>
         </Container>
@@ -71,7 +67,8 @@ function AddBook(){
     
 }
 
-*/
+
+/*
 function AddBook() {
     const [bookData, setBookData] = useState({
       titulo: '',
@@ -91,4 +88,5 @@ function AddBook() {
       </React.Fragment>
     );
 }
+*/
 export default AddBook;

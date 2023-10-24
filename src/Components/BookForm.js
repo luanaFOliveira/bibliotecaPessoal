@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'reactstrap';
 
-
-function BookForm({ book, handleOnSubmit }) {
+/*
+function BookForm({ props }) {
 
   const [book, setBook] = useState({
     titulo: props.book ? props.book.titulo : '',
@@ -118,3 +118,4 @@ function BookForm({ book, handleOnSubmit }) {
 };
 
 export default BookForm;
+*/
