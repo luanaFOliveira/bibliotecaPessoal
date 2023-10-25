@@ -65,9 +65,9 @@ function BookPage(){
             <h3>{livro.autor}</h3>
             <div class="card-body">{livro.resenha}</div>
             <div className="d-flex align-items-center">
-                <h4 className="mr-2">Classificação:</h4>
+                <h4 className="mr-auto">Classificação:</h4>
                 <StarRating rating={livro.classificacao} />
-                <div className="ml-auto">
+                <div className="ml-auto card-links">
                     <Link to={`/editBook/${id_livro}`} className="card-link">Editar</Link>
                     <a href="/" className="card-link" onClick={() => onDelete(id_livro)}>Excluir</a>
                 </div>

@@ -5,14 +5,12 @@
     align-items: center;
 }
 
-
-.card-links {
-    display: flex;
-    justify-content: flex-end;
+.card-links a.card-link {
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
 }
-  
-.card-link {
-    margin-left: 10px; /* Adicione um espaçamento entre os links */
-    text-decoration: none; /* Remova a decoração de link (sublinhado) */
-    color: #007bff; /* Cor dos links (pode ajustar a cor desejada) */
+
+.card-links a.card-link:hover {
+    color: white;
 }
