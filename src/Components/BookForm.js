@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Container, Form, FormGroup, Input, Label } from 'reactstrap';
-import { useNavigate } from 'react-router-dom';
 import './BookForm.css';
 import StarRatingInput from '../StarRatingInput';
 

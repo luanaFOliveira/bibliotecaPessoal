@@ -31,7 +31,7 @@ function EditBook(){
     }
     useEffect(() => {
         getLivroTemp();
-    },[]);
+    },[getLivroTemp]);
 
     const initialFormState = {
         titulo: livro_temp.titulo,

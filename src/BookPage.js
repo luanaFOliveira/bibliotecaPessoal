@@ -2,8 +2,7 @@ import React,{useState,useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'reactstrap';
 import NavBar from './Components/NavBar';
-import BookForm from './Components/BookForm';
-import { useNavigate,useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './BookPage.css';
 import StarRating from './Components/StarRating';
 import { Link } from 'react-router-dom';
@@ -54,7 +53,7 @@ function BookPage(){
     }
     useEffect(() => {
         getLivro();
-    },[]);
+    },[getLivro]);
 
 
     return(<div>
