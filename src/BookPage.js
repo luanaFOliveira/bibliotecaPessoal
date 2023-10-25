@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'reactstrap';
 import NavBar from './Components/NavBar';
@@ -51,9 +51,8 @@ function BookPage(){
             console.error(error);
             });
     }
-    useEffect(() => {
-        getLivro();
-    },[getLivro]);
+  
+    getLivro();
 
 
     return(<div>

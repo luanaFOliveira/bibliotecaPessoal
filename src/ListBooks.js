@@ -27,9 +27,9 @@ function ListBooks() {
         console.error(error);
       });
   }
-
   useEffect(() => {
     getLivros();
+    // eslint-disable-next-line
   }, [page]);
 
   return (
