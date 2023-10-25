@@ -4,7 +4,7 @@ import { Container } from 'reactstrap';
 import NavBar from './Components/NavBar';
 import BookForm from './Components/BookForm';
 import { useNavigate,useParams } from 'react-router-dom';
-
+import './AddBook.css';
 
 function EditBook(){
 
@@ -68,7 +68,7 @@ function EditBook(){
     return(<div>
         <NavBar />
         <Container>
-            <h1>Editar Livro</h1>
+            <h1 className='titulo-newBook'>Editar Livro</h1>
             <BookForm initialFormState={initialFormState} handleSubmit={handleSubmit} handleChange={handleChange}/>
         </Container>
 
