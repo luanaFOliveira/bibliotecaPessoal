@@ -34,4 +34,11 @@ class LivrosController extends Controller
         $livro->delete();
         return response()->json(null,204);
     }
+
+    public function buscarLivrosNoIntervalo($indexmin, $indexmax)
+    {
+        $livros = Livro::whereBetween('id', [$indexmin, $indexmax])->get();
+        return response()->json($livros, 200);
+    }
+    
 }
