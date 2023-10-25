@@ -4,8 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import StarRating from './StarRating';
 import { Link } from 'react-router-dom';
 
-//<img src="https://via.placeholder.com/100x100" alt="Imagem do Livro 1" className="card-image" />
-//                            <p className="card-text">{resenha}</p>
 
 const onDelete = (id_livro) => {
     if (!window.confirm("Deseja realmente excluir este livro?")) return;
@@ -32,7 +30,8 @@ const onDelete = (id_livro) => {
 function Card({titulo,autor,classificacao,id_livro}){
     
     return (
-        <div className="col-3 bg-transparent">
+        <div className="col-4 bg-transparent">
+            <Link to={`/book/${id_livro}`} className='link-card'>
             <div className="card custom-card">
                 <div className="card-body">
                     <div className="card-content">
@@ -50,6 +49,7 @@ function Card({titulo,autor,classificacao,id_livro}){
                     </div>
                 </div>
             </div>
+            </Link>
         </div>
     );
 }

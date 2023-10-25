@@ -4,12 +4,50 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ListBooksCards from './Components/ListBooksCards';
 import NavBar from './Components/NavBar';
 
+function ListBooks() {
+  const [livros, setLivros] = useState([]);
+  const [page, setPage] = useState(1);
+  const itemsPerPage = 9; // Quantidade de itens por página
+
+  const getLivros = () => {
+    const minId = (page - 1) * itemsPerPage + 1;
+    const maxId = minId + itemsPerPage - 1;
+
+    fetch(`http://localhost:8000/api/livros/pagina/${minId}/${maxId}`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      mode: 'cors',
+    })
+      .then(response => response.json())
+      .then(livros => setLivros(livros))
+      .catch(error => {
+        console.error(error);
+      });
+  }
+
+  useEffect(() => {
+    getLivros();
+  }, [page]);
+
+  return (
+    <div>
+      <NavBar />
+      <ListBooksCards livros={livros} />
+      <div className='button-container'>
+        <button type="button" class="btn btn-dark" onClick={() => setPage(page - 1)}>Página Anterior</button>
+        <button type="button" class="btn btn-dark" onClick={() => setPage(page + 1)}>Próxima Página</button>
+      </div>
+    </div>
+  );
+}
 
 
+/*
 function ListBooks(){
-    
- 
-    
+  
     const [livros,setLivros] = useState([]);
 
     const getLivros = () =>{
@@ -32,24 +70,7 @@ function ListBooks(){
         getLivros();
     },[]);
     
-   /*
-    const livros = [
-        {
-          titulo: 'Livro 1',
-          autor: 'Autor 1',
-          resenha: 'Esta é a resenha do Livro 1. É um livro muito interessante.',
-          classificacao: 3,
-          imagem: 'caminho/para/imagem1.jpg',
-        },
-        {
-          titulo: 'Livro 2',
-          autor: 'Autor 2',
-          resenha: 'Este é o Livro 2. O autor é muito renomado.',
-          classificacao: 4,
-          imagem: 'caminho/para/imagem2.jpg',
-        },
-    ];
-*/
+
     return (
         <div>
             <NavBar />
@@ -57,6 +78,6 @@ function ListBooks(){
         </div>
     );
 }
-
+*/
 
 export default ListBooks;

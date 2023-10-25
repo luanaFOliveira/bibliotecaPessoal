@@ -4,6 +4,7 @@ import { Container} from 'reactstrap';
 import NavBar from './Components/NavBar';
 import BookForm from './Components/BookForm';
 import { useNavigate } from 'react-router-dom';
+import './AddBook.css';
 
 function AddBook(){
 
@@ -41,8 +42,8 @@ function AddBook(){
     return(<div>
         <NavBar />
         <Container>
-            <h1>Novo Livro</h1>
-            <BookForm initialFormState={initialFormState} handleSubmit={handleSubmit} handleChange={handleChange}/>
+        <h1 className='titulo-newBook'>Novo Livro</h1>
+        <BookForm initialFormState={initialFormState} handleSubmit={handleSubmit} handleChange={handleChange}/>
         </Container>
 
     </div>);

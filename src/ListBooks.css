@@ -1,3 +1,8 @@
-.list-wrapper{
-    background-color: transparent;
+
+.button-container {
+    display: flex;
+}
+
+.button-container button {
+    margin-right: 10px; /* Ajuste o valor conforme necessário para o espaçamento desejado */
 }
