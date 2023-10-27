@@ -10,7 +10,7 @@ const onDelete = (id_livro) => {
       
     try {
 
-        fetch(`http://localhost:8000/api/livros/${id_livro}`, {
+        fetch(`https://bibliotecapessoal-62f86412a930.herokuapp.com/api/livros/${id_livro}`, {
             method: 'DELETE',
             headers: {
             'Accept': 'application/json',

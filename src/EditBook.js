@@ -15,7 +15,7 @@ function EditBook(){
 
     const getLivroTemp = async () =>{
 
-        await fetch(`http://localhost:8000/api/livros/${id_livro}`, {
+        await fetch(`https://bibliotecapessoal-62f86412a930.herokuapp.com/api/livros/${id_livro}`, {
             method: 'GET',
             headers: {
             'Accept': 'application/json',
@@ -51,7 +51,7 @@ function EditBook(){
     const handleSubmit = async (event) => {
         event.preventDefault();
        
-        await fetch(`http://localhost:8000/api/livros/${id_livro}`, {
+        await fetch(`https://bibliotecapessoal-62f86412a930.herokuapp.com/api/livros/${id_livro}`, {
             method:'PUT',
             headers: {
                 'Accept': 'application/json',

@@ -26,7 +26,7 @@ function AddBook(){
     const handleSubmit = async (event) => {
         event.preventDefault();
        
-        await fetch(`http://localhost:8000/api/livros`, {
+        await fetch(`https://bibliotecapessoal-62f86412a930.herokuapp.com/api/livros`, {
         method:'POST',
         headers: {
             'Accept': 'application/json',

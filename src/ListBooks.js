@@ -13,7 +13,7 @@ function ListBooks() {
     const minId = (page - 1) * itemsPerPage + 1;
     const maxId = minId + itemsPerPage - 1;
 
-    fetch(`http://localhost:8000/api/livros/pagina/${minId}/${maxId}`, {
+    fetch(`https://bibliotecapessoal-62f86412a930.herokuapp.com/api/livros/pagina/${minId}/${maxId}`, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
@@ -45,39 +45,5 @@ function ListBooks() {
 }
 
 
-/*
-function ListBooks(){
-  
-    const [livros,setLivros] = useState([]);
-
-    const getLivros = () =>{
-        fetch('http://localhost:8000/api/livros', {
-            method: 'GET',
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            },
-            mode: 'cors' 
-          })
-            .then(response => response.json())
-            .then(livros => setLivros(livros))
-            .catch(error => {
-              console.error(error);
-            });
-    }
-
-    useEffect(() => {
-        getLivros();
-    },[]);
-    
-
-    return (
-        <div>
-            <NavBar />
-            <ListBooksCards livros={livros}/>  
-        </div>
-    );
-}
-*/
 
 export default ListBooks;
