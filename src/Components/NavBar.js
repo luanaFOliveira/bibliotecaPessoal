@@ -3,10 +3,6 @@ import './NavBar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
-//        <a className="navbar-brand" href="/">Biblioteca Pessoal</a>
-//a className="nav-item nav-link" href="/listBooks">Meus Livros</a>
-//<a className="nav-item nav-link" href="/addBook">Adicionar Livro</a>
-
 function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg custom-navbar">
