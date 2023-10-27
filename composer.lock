@@ -3309,7 +3309,7 @@
             },
             "require": {
                 "php": "^7.4 || ^8.0",
-                "symfony/polyfill-php81": "^1.23",
+                "symfony/polyfill-php81": "^1.23"
                 
             },
             "require-dev": {
