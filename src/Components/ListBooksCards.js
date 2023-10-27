@@ -26,6 +26,7 @@ const onDelete = (id_livro) => {
     }
 
 }
+//                                    <a href="/" className="card-link" onClick={() => onDelete(id_livro)}>Excluir</a>
 
 function Card({titulo,autor,classificacao,id_livro}){
     
@@ -42,7 +43,7 @@ function Card({titulo,autor,classificacao,id_livro}){
                                 <StarRating rating={classificacao} />
                                 <div className="card-links">
                                     <Link to={`/editBook/${id_livro}`} className="card-link">Editar</Link>
-                                    <a href="/" className="card-link" onClick={() => onDelete(id_livro)}>Excluir</a>
+                                    <Link to={`/`} className="card-link" onClick={() => onDelete(id_livro)}>Excluir</Link>
                                 </div>
                             </div>                    
                         </div>

@@ -67,7 +67,7 @@ function BookPage(){
                 <StarRating rating={livro.classificacao} />
                 <div className="ml-auto card-links">
                     <Link to={`/editBook/${id_livro}`} className="card-link">Editar</Link>
-                    <a href="/" className="card-link" onClick={() => onDelete(id_livro)}>Excluir</a>
+                    <Link to={`/`} className="card-link" onClick={() => onDelete(id_livro)}>Excluir</Link>
                 </div>
             </div>
         </div>
