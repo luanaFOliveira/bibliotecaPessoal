@@ -8,11 +8,11 @@ Foi usado React Js para o front-end, com icones da FontAwesome. Para o deploy do
 
 URL do back-end: https://bibliotecapessoal-62f86412a930.herokuapp.com
 
-URL do front-end: https://fantastic-panda-e6dc3f.netlify.app/
+URL do front-end: https://bibliotecapessoal-luana.netlify.app/
 
 A URL do back-end serve simplesmente para testar as requisicoes, o sistema completo esta na URL do front-end
 
-## URL DO SISTEMA: https://fantastic-panda-e6dc3f.netlify.app/
+## URL DO SISTEMA: https://bibliotecapessoal-luana.netlify.app/
 
 #OBS:
 
